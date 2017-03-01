@@ -17,12 +17,14 @@
     return;
   }
   if (typeof define === 'function' && define.amd) { // AMD
+    /* eslint-disable indent */
     define(['tern/lib/infer',
             'tern/lib/tern',
             'acorn/dist/acorn',
             'acorn/dist/walk',
             'acorn-jsx/inject',
             './inject'], mod);
+    /* eslint-enable indent */
     return;
   }
   mod(tern, tern, acorn, acorn.walk, acornJSX, acornJSXWalk); // Global
